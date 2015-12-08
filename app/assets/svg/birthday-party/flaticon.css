@@ -165,3 +165,10 @@ margin-left: 20px;
 .flaticon-wishes:before {
 	content: "\e031";
 }
+
+@media screen and (max-width: 44em) {
+	[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+	[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+		font-size: .4em;
+	}
+}

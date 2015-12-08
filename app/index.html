@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
 
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,400italic'>
-    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css"/>
-      <link rel="stylesheet" type="text/css" href="/bower_components/weather-icons/css/weather-icons.css"/>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
+      <link rel="stylesheet" type="text/css" href="bower_components/weather-icons/css/weather-icons.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
 
     <style type="text/css">
@@ -29,12 +29,12 @@
 
   <body ng-app="starterApp" layout="row" ng-controller="UserController as ul" ng-cloak >
 
-  <div flex tabIndex="-1" role="main" class="md-whiteframe-z2 gridListdemoDynamicTiles">
+  <div flex ng-cloak tabIndex="-1" role="main" class="md-whiteframe-z2 gridListdemoDynamicTiles">
 
       <md-grid-list
-              md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
-              md-row-height-gt-md="1:1" md-row-height="4:3"
-              md-gutter="0px" md-gutter-gt-sm="0px" >
+              md-cols="2" md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+              md-row-height-gt-md="1:1" md-row-height="2:2"
+              md-gutter="2px" md-gutter-gt-sm="0px"  >
           <md-grid-tile ng-repeat="tile in ul.tiles"
                         md-rowspan="{{tile.span.row}}"
                         md-colspan="{{tile.span.col}}"
@@ -47,18 +47,27 @@
 
 
               <img ng-if="tile.type == 'image' && $index" ng-src="{{tile.image}}" style="width: 100%" alt="" />
-                <div ng-if="tile.weather" >
+                <div ng-if="tile.weather" layout="row" class="text-center">
+                    <div flex>
+                        <h2>London</h2>
                     <todays-weather
                             location="London, UK"
-                            units="metric">
+                            custom-size="200"
+                            units="metric"
+                            use-google-images="true">
                     </todays-weather>
-                    <h2>London</h2>
 
+                    </div>
+                    <div flex>
+                        <h2>Budapest</h2>
                   <todays-weather
                           location="Budapest"
-                          units="metric">
+                          units="metric"
+                          custom-size="200"
+                          use-google-images="true">
                   </todays-weather>
-                  <h2>Budapest</h2>
+
+                        </div>
               </div>
               <timer ng-if="tile.type =='timer'" language="hu" start-time="tile.time" flex="100">
 
