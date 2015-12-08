@@ -1,0 +1,167 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 1em;
+	color: #fdc56d;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-alcohol25:before {
+	content: "\e000";
+}
+.flaticon-alcohol26:before {
+	content: "\e001";
+}
+.flaticon-bakery19:before {
+	content: "\e002";
+}
+.flaticon-balloon23:before {
+	content: "\e003";
+}
+.flaticon-birthday cake6:before {
+	content: "\e004";
+}
+.flaticon-birthday cake7:before {
+	content: "\e005";
+}
+.flaticon-birthdays1:before {
+	content: "\e006";
+}
+.flaticon-birthdays:before {
+	content: "\e007";
+}
+.flaticon-candies4:before {
+	content: "\e008";
+}
+.flaticon-candy2:before {
+	content: "\e009";
+}
+.flaticon-champagne10:before {
+	content: "\e00a";
+}
+.flaticon-chess piece6:before {
+	content: "\e00b";
+}
+.flaticon-clowns2:before {
+	content: "\e00c";
+}
+.flaticon-clowns3:before {
+	content: "\e00d";
+}
+.flaticon-cocktail35:before {
+	content: "\e00e";
+}
+.flaticon-costume3:before {
+	content: "\e00f";
+}
+.flaticon-dessert24:before {
+	content: "\e010";
+}
+.flaticon-dessert25:before {
+	content: "\e011";
+}
+.flaticon-dresses5:before {
+	content: "\e012";
+}
+.flaticon-drink175:before {
+	content: "\e013";
+}
+.flaticon-drink176:before {
+	content: "\e014";
+}
+.flaticon-drinks16:before {
+	content: "\e015";
+}
+.flaticon-fireworks8:before {
+	content: "\e016";
+}
+.flaticon-friend:before {
+	content: "\e017";
+}
+.flaticon-gifts5:before {
+	content: "\e018";
+}
+.flaticon-hand gesture5:before {
+	content: "\e019";
+}
+.flaticon-light41:before {
+	content: "\e01a";
+}
+.flaticon-lover9:before {
+	content: "\e01b";
+}
+.flaticon-loving12:before {
+	content: "\e01c";
+}
+.flaticon-magic31:before {
+	content: "\e01d";
+}
+.flaticon-magician1:before {
+	content: "\e01e";
+}
+.flaticon-magician5:before {
+	content: "\e01f";
+}
+.flaticon-magic wand:before {
+	content: "\e020";
+}
+.flaticon-masks3:before {
+	content: "\e021";
+}
+.flaticon-message40:before {
+	content: "\e022";
+}
+.flaticon-muffin2:before {
+	content: "\e023";
+}
+.flaticon-music45:before {
+	content: "\e024";
+}
+.flaticon-musical143:before {
+	content: "\e025";
+}
+.flaticon-parties1:before {
+	content: "\e026";
+}
+.flaticon-party16:before {
+	content: "\e027";
+}
+.flaticon-party17:before {
+	content: "\e028";
+}
+.flaticon-photo camera12:before {
+	content: "\e029";
+}
+.flaticon-pizzas6:before {
+	content: "\e02a";
+}
+.flaticon-recording3:before {
+	content: "\e02b";
+}
+.flaticon-soup:before {
+	content: "\e02c";
+}
+.flaticon-star47:before {
+	content: "\e02d";
+}
+.flaticon-suits:before {
+	content: "\e02e";
+}
+.flaticon-theater8:before {
+	content: "\e02f";
+}
+.flaticon-weekly calendar1:before {
+	content: "\e030";
+}
+.flaticon-wishes:before {
+	content: "\e031";
+}

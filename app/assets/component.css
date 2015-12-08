@@ -3,7 +3,7 @@ html, body, .container {
 }
 
 body {
-	background: #e74c3c url(../images/winterforest.png) repeat-x bottom center;
+	background: #e74c3c url(../images/background.jpg) no-repeat bottom center;
 	overflow: hidden;
 }
 
@@ -38,7 +38,21 @@ h1 span {
 .merrywrap svg circle {
 	fill: none;
 }
-
+#Capa_1 path:nth-child(0){
+	fill: pink;
+}
+#Capa_1 path:nth-child(1){
+	fill: brown;
+}
+#Capa_1 path:nth-child(2){
+	fill: purple;
+}
+#Capa_1 path:nth-child(3){
+	fill: pink;
+}
+#Capa_1 path:nth-child(4){
+	fill: lightblue;
+}
 .giftbox {
 	width: 300px;
 	height: 220px;
@@ -180,7 +194,7 @@ h1 span {
 .icons svg polygon,
 .icons svg circle {
 	stroke: #fdc56d;
-	stroke-width: 1;
+	stroke-width: 3;
 }
 
 /* Background */
@@ -195,7 +209,7 @@ h1 span {
 
 .background svg path {
 	stroke: #fdc56d;
-	stroke-width: 0.8;
+	stroke-width: 3;
 }
 
 /* Grid elements transforms */
@@ -1080,7 +1094,7 @@ h1 span {
 
 .step-3 .icons span.letter,
 .step-4 .icons span.letter {
-	color: #2c3e50;
+	color: #FF0;
 	text-shadow: 5px 5px 0 #ca3121;
 }
 
@@ -1171,3 +1185,4 @@ h1 span {
 		stroke-width: 3;
 	}
 }
+

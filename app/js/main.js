@@ -74,6 +74,7 @@
 		//emitter.runAhead(0);
 		//emitter.start(60);
         confettiMain.start();
+		document.getElementById('zene').play();
         window.addEventListener('resize', function(event){
             confettiMain.resize();
         });

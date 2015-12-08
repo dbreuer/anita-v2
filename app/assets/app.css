@@ -188,3 +188,10 @@ md-grid-tile.h1 {
   text-align: center;
   font-size: 3em;
 }
+
+.date-card h1 {
+
+}
+.date-card h3 {
+  font-size: 4em;
+}

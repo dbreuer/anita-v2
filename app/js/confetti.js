@@ -368,12 +368,12 @@ document.addEventListener("DOMContentLoaded", function() {
         this.start = function() {
             this.stop()
             var context = this;
-            this.update();
+            update();
         }
         this.stop = function() {
             cAF(this.interval);
         }
-        this.update = function() {
+        update = function() {
             var i = 0;
             context.clearRect(0, 0, canvas.width, canvas.height);
             for (i = 0; i < confettiPaperCount; i++) {
@@ -385,7 +385,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 confettiRibbons[i].Draw(context);
             }
             this.interval = rAF(function() {
-                confetti.update();
+                
+                this.update();
             });
         }
     };

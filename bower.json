@@ -11,7 +11,7 @@
     "angular-aria": "^1.4.6",
     "angular-material": "^0.11.2",
     "angular-timer": "~1.3.3",
-    "weather-icons": "~0.1",
+    "weather-icons": "~2.0.10",
     "angular-weather-directive": "https://github.com/shusain/angular-sh-weather.git#~0.0.2"
   },
   "devDependencies": {
