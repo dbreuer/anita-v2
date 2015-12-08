@@ -62,17 +62,21 @@
 	}
 
 	function letitsnow() {
-		// https://github.com/daveWid/canvas-snow
-		var canvas = document.getElementById("snowfall");
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
-		// Now the emitter
-		var emitter = Object.create(rectangleEmitter);
-		emitter.setCanvas(canvas);
-		emitter.setBlastZone(0, -10, canvas.width, 1);
-		emitter.particle = snow;
-		emitter.runAhead(0);
-		emitter.start(60);
+		//// https://github.com/daveWid/canvas-snow
+		//var canvas = document.getElementById("snowfall");
+		//canvas.width = window.innerWidth;
+		//canvas.height = window.innerHeight;
+		//// Now the emitter
+		//var emitter = Object.create(rectangleEmitter);
+		//emitter.setCanvas(canvas);
+		//emitter.setBlastZone(0, -10, canvas.width, 1);
+		//emitter.particle = snow;
+		//emitter.runAhead(0);
+		//emitter.start(60);
+        confettiMain.start();
+        window.addEventListener('resize', function(event){
+            confettiMain.resize();
+        });
 	}
 
 	// http://stackoverflow.com/a/2450976

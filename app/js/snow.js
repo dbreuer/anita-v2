@@ -33,7 +33,7 @@ var snow = {
 	 * @param	c	 The canvas context to draw onto
 	 */
 	draw:function(c){
-		c.fillStyle = 'rgba(255,255,255,'+this.alpha+')';
+		c.fillStyle = this.randomColor(this.alpha);
 		c.beginPath();
 		c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
 		c.fill();
@@ -60,7 +60,7 @@ var snow = {
 		this.x = s.x;
 		this.y = s.y;
 
-		this.alpha = this.randomRange(0.3, 1);
+		this.alpha = this.randomRange(0.8, 1);
 		this.radius = this.randomRange(1, 5);
 
 		this.velocity = {
@@ -87,6 +87,17 @@ var snow = {
 	randomRange:function(low, high){
 		return (Math.random() * (high - low)) + low;
 	},
+
+
+    randomColor:function(alpha){
+        var brightness = 5;
+        //6 levels of brightness from 0 to 5, 0 being the darkest
+        var rgb = [Math.random() * 256, Math.random() * 256, Math.random() * 256];
+        var mix = [brightness*51, brightness*51, brightness*51]; //51 => 255/5
+        var mixedrgb = [rgb[0] + mix[0], rgb[1] + mix[1], rgb[2] + mix[2]].map(function(x){ return Math.round(x/2.0)})
+        var out = "rgba(" + mixedrgb.join(",") + ", "+alpha+")";
+        return out;
+    },
 
 	/**
 	 * Gets a random starting point for the particle.
