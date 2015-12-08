@@ -1,9 +1,9 @@
 {
-  "name": "material-start",
+  "name": "anita-v2",
   "private": true,
-  "version": "0.0.3",
-  "description": "A starter project for AngularJS Material",
-  "repository": "https://github.com/angular/material-start",
+  "version": "0.1.0",
+  "description": "A starter project for AngularJS Material custom tile app",
+  "repository": "https://github.com/dbreuer/anita-v2",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
@@ -14,10 +14,14 @@
     "karma-junit-reporter": "^0.2.2",
     "selenium-webdriver": "^2.45.1"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "scripts": {
     "postinstall": "bower update",
     "prestart": "npm update",
-    "test": "protractor ./e2e/protractor.conf.js"
+    "test": "protractor ./e2e/protractor.conf.js",
+      "start": "node web.js"
   },
   "jspm": {
     "directories": {
