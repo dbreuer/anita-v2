@@ -18,20 +18,8 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "postinstall": "bower update",
-    "prestart": "npm update",
-    "test": "protractor ./e2e/protractor.conf.js",
+    "postinstall": "bower install",
     "start": "node web.js"
-  },
-  "jspm": {
-    "directories": {
-      "baseURL": "app"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
-    }
   },
   "dependencies": {
     "bower": "^1.7.0",
