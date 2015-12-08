@@ -10,6 +10,7 @@
 
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,400italic'>
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+      <link rel="stylesheet" type="text/css" href="bower_components/weather-icons/css/weather-icons.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
 
     <style type="text/css">
@@ -18,6 +19,9 @@
          */
         [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
           display: none !important;
+        }
+        .text-center {
+            text-align: center;
         }
     </style>
 
@@ -37,15 +41,48 @@
                         md-colspan-sm="1"
                         ng-class="tile.background" >
 
-              <img ng-if="tile.type == 'image' && $index" ng-src="http://lorempixel.com/300/300/people/{{$index}}/" style="width: 100%" alt="" />
-              <!--<weather ng-if="tile.weather" city="tile.weather"></weather>-->
+              <date-directive ng-if="tile.type=='date'">
+
+              </date-directive>
+
+
+              <img ng-if="tile.type == 'image' && $index" ng-src="{{tile.image}}" style="width: 100%" alt="" />
+                <div ng-if="tile.weather" >
+                    <todays-weather
+                            location="London, UK"
+                            units="metric">
+                    </todays-weather>
+                    <h2>London</h2>
+
+                  <todays-weather
+                          location="Budapest"
+                          units="metric">
+                  </todays-weather>
+                  <h2>Budapest</h2>
+              </div>
               <timer ng-if="tile.type =='timer'" language="hu" start-time="tile.time" flex="100">
-                  <md-grid-list md-cols-sm="4" md-cols-gt-md="4" md-cols-md="4"  md-row-height="4:1">
-                      <md-grid-tile ng-bind="days + ' days'" class="h1"></md-grid-tile>
-                      <md-grid-tile ng-bind="hours+ ' hours'" class="h1"></md-grid-tile>
-                      <md-grid-tile ng-bind="minutes+ ' min'" class="h1"></md-grid-tile>
-                      <md-grid-tile ng-bind="seconds+ ' sec'" class="h1"></md-grid-tile>
-                  </md-grid-list>
+
+                  <div layout="row" class="text-center">
+                      <div flex="50">
+                          <h1>{{days}}</h1>
+                          <h4>nap</h4>
+                      </div>
+                      <div flex="50">
+                          <h1>{{hours}}</h1>
+                          <h4>ora</h4>
+                      </div>
+                  </div>
+                  <div layout="row" class="text-center">
+                      <div flex="50">
+                          <h1>{{minutes}}</h1>
+                          <h4>perc</h4>
+                      </div>
+                      <div flex="50">
+                          <h1>{{seconds}}</h1>
+                          <h4>masodperc</h4>
+                      </div>
+                  </div>
+
               </timer>
 
 
@@ -60,6 +97,7 @@
     <script src="./bower_components/angular-timer/dist/angular-timer.min.js"></script>
     <script src="./bower_components/humanize-duration/humanize-duration.js"></script>
     <script src="./bower_components/momentjs/moment.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-weather-directive/dist/angular-weather-directive.js"></script>
     <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
 
     <script src="./src/users/Users.js"></script>
@@ -88,6 +126,6 @@
               });
 
     </script>
-
+  
   </body>
 </html>

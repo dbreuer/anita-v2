@@ -24,7 +24,17 @@
     self.showContactOptions  = showContactOptions;
 
     // Load all registered users
+    self.images = [
+        "images/anita-david.jpg",
+        "images/anita-david1.jpg",
+        "images/anita-david2.jpg",
+        "images/anita-david3.jpg",
+        "images/anita-david4.jpg",
+        "images/anita-david5.jpg",
+        "images/anita-david6.jpg",
+        "images/santorini.jpg"
 
+    ];
     userService
           .loadAllUsers()
           .then( function( users ) {
@@ -65,7 +75,7 @@
 
         return $mdBottomSheet.show({
           parent: angular.element(document.getElementById('content')),
-          templateUrl: './src/users/view/contactSheet.html',
+          templateUrl: './src/users/view/happyBday.html',
           controller: [ '$mdBottomSheet', ContactPanelController],
           controllerAs: "cp",
           bindToController : true,
@@ -90,7 +100,9 @@
           };
         }
     }
-
+      function getRandomIntInclusive(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
 
       this.tiles = buildGridModel({
           icon : "avatar:svg-",
@@ -110,10 +122,10 @@
                   case 1:
                       it.background = "red";
                       it.span.row = it.span.col = 2;
-                      it.weather = 'london';
+                        it.type = 'date';
                       break;
-                  case 2: it.background = "green"; it.type = 'image';        break;
-                  case 3: it.background = "darkBlue"; it.type = 'image';      break;
+                  case 2: it.background = "green"; it.type = 'image';  it.image = self.images[0];       break;
+                  case 3: it.background = "darkBlue"; it.type = 'image';  it.image = self.images[1];    break;
                   case 4:
                       it.background = "blue";
                       it.span.col = 2;
@@ -125,12 +137,12 @@
                       it.span.row = it.span.col = 2;
                       it.weather = 'budapest';
                       break;
-                  case 6: it.background = "pink"; it.type = 'image';          break;
-                  case 7: it.background = "darkBlue"; it.type = 'image';      break;
-                  case 8: it.background = "purple"; it.type = 'image';       break;
-                  case 9: it.background = "deepBlue";it.type = 'image';      break;
-                  case 10: it.background = "lightPurple";it.type = 'image';  break;
-                  case 11: it.background = "yellow"; it.type = 'image';      break;
+                  case 6: it.background = "pink"; it.type = 'image';   it.image = self.images[2];       break;
+                  case 7: it.background = "darkBlue"; it.type = 'image'; it.image = self.images[3];     break;
+                  case 8: it.background = "purple"; it.type = 'image';   it.image = self.images[4];    break;
+                  case 9: it.background = "deepBlue";it.type = 'image'; it.image = self.images[5];     break;
+                  case 10: it.background = "lightPurple";it.type = 'image';it.image = self.images[6];  break;
+                  case 11: it.background = "yellow"; it.type = 'image'; it.image = self.images[7];     break;
               }
               results.push(it);
           }

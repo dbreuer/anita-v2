@@ -2,7 +2,8 @@
   'use strict';
 
   angular.module('users')
-         .service('userService', ['$q', UserService]);
+         .service('userService', ['$q', UserService])
+         .directive('dateDirective',  dateDirective);
 
   /**
    * Users DataService
@@ -55,4 +56,19 @@
     };
   }
 
+    function dateDirective() {
+        return {
+            restrict:'AE',
+            replace:true,
+            templateUrl:'templates/dateDirective.tpl.html',
+            link: function(scope, elem, attr){
+                var date = new Date();
+                var monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"
+                ];
+                scope.month = monthNames[date.getMonth()];
+                scope.day = date.getDate();
+            }
+        };
+    }
 })();
