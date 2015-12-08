@@ -21,7 +21,7 @@
     "postinstall": "bower update",
     "prestart": "npm update",
     "test": "protractor ./e2e/protractor.conf.js",
-      "start": "node web.js"
+    "start": "node web.js"
   },
   "jspm": {
     "directories": {
@@ -34,6 +34,7 @@
     }
   },
   "dependencies": {
+    "bower": "^1.7.0",
     "express": "^4.13.3"
   }
 }
