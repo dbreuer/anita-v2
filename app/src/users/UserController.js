@@ -130,7 +130,7 @@
                       it.background = "blue";
                       it.span.col = 2;
                       it.type = 'timer';
-                      it.time = Math.round(+new Date("2015-12-19"));
+                      it.time = Math.round(+new Date("2015-12-19 18:00"));
                       break;
                   case 5:
                       it.background = "yellow";
