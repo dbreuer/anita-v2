@@ -1,6 +1,7 @@
 
 logs/*
 !.gitkeep
+/app/js/_delete_me.js
 node_modules/
 tmp
 .DS_Store
